@@ -7,11 +7,13 @@ const CONTRACTS_BASE_PATH = `${process.cwd()}/dapp-contract/artifacts/contracts`
 const CONTRACTS_ABI_PATH = `${process.cwd()}/dapp-ui/static/abi`
 
 async function main () {
-  const accounts = await ethers.getSigners()
-  const owner = accounts[0].address
+  const [owner, user1, user2, user3, ...accounts] = await ethers.getSigners()
 
   const Dapp = await ethers.getContractFactory('Dapp')
   const dapp = await Dapp.deploy()
+
+  await dapp.deployed()
+
   console.log('your dapp address:', dapp.address)
 
   const contractsAddr = JSON.stringify({
