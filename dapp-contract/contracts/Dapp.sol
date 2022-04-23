@@ -4,7 +4,8 @@ pragma solidity ^0.8.9;
 import "hardhat/console.sol";
 
 contract Dapp {
-  string private str = 'Hardhat Dapp Starter';
+  string private str = 'Hardhat Parcel Dapp Starter';
+
   event changeStr(string str);
 
   function getStr () public view returns (string memory) {
