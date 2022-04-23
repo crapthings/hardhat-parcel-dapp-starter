@@ -2,11 +2,20 @@
 
 ## Getting Started
 
+terminal 1
+
 ```bash
 git clone https://github.com/crapthings/hardhat-parcel-dapp-starter
 cd hardhat-parcel-dapp-starter
 npm i
 npm run dev
+```
+
+terminal 2
+
+```bash
+npm run contract:compile
+npm run contract:deploy
 ```
 
 ## Requirements
